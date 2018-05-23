@@ -1,5 +1,5 @@
-# vue-sorttable
+# vue-sortable
 
-> A Vue.js sorttable component
+> A Vue.js sortable component
 
 Only for test now! Don't use it for production
