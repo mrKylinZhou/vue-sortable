@@ -5,5 +5,20 @@
   "main": "index.js",
   "repository": "git@github.com:mrKylinZhou/vue-sortable.git",
   "author": "Kylin <mrkylin.zhou@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.7",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "css-loader": "^0.28.11",
+    "vue-loader": "^15.2.0",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
 }
