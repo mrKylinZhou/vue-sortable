@@ -1,11 +1,13 @@
 <template>
   <div ref="wrapper">
-    <slot></slot>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
   </div>
 </template>
 
 <script>
-import { Sortable } from '@shopify/draggable';
+import { Sortable } from '@shopify/draggable'
 
 export default {
   name: 'VueSortable',
@@ -24,31 +26,32 @@ export default {
   watch: {
     canSort(sort) {
       sort
-        ? this.$init()
-        : this.$destroy()
+        ?  this.init()
+        : this.destroy()
     }
   },
   methods: {
-    $init() {
+    init() {
       const wrapper = this.$refs.wrapper
       if (!wrapper) return
       this.sortable = new Sortable(wrapper, {
-        draggable: '',
-        delay: 300
+        draggable: '.item',
+        delay: 0,
+        animation: 150
       });
     },
-    $destroy() {
+    destroy() {
       this.sortable && this.sortable.destroy()
       this.sortable = null
     }
   },
   mounted() {
     this.$nextTick(() => {
-      this.canSort && this.$init()
+      this.canSort && this.init()
     })
   },
   destroyed() {
-    this.$destroy()
+    this.destroy()
   }
 }
 </script>

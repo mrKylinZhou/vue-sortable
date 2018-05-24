@@ -15,7 +15,7 @@
     "build": "./node_modules/.bin/webpack --display-error-details --config ./build/webpack.js"
   },
   "dependencies": {
-    "sortablejs": "^1.7.0",
+    "@shopify/draggable": "^1.0.0-beta.7",
     "vue": "^2.5.16"
   },
   "devDependencies": {
