@@ -1,10 +1,12 @@
 <template>
-  <div ref="wrapper">
+  <div
+    ref="wrapper"
+    class="wrapper">
     <div
       class="k-sortable-item"
       v-for="(item, index) in lists"
       :key="index">
-      {{ item }}
+      <slot :data="item"></slot>
     </div>
   </div>
 </template>
@@ -12,26 +14,32 @@
 <script>
 import { Sortable } from '@shopify/draggable'
 
+import { cloneDeep } from 'lodash/lang'
+
 export default {
   name: 'VueSortable',
   props: {
-    // 是否启动拖动
-    canSort: {
+    value: {
+      required: true,
+      type: Array
+    },
+    // 是否禁止拖动
+    disabled: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
   data() {
     return {
       sortable: null,
-      lists: new Array(30).fill('t').map((item, index) => item + index)
+      lists: cloneDeep(this.value)
     }
   },
   watch: {
-    canSort(sort) {
-      sort
-        ?  this.init()
-        : this.destroy()
+    disabled(bool) {
+      bool
+        ? this.destroy()
+        : this.init()
     }
   },
   methods: {
@@ -49,6 +57,11 @@ export default {
       this.sortable.on('sortable:stop', e => {
         const oldIndex = e.data.oldIndex
         const newIndex = e.data.newIndex
+        const spliceItem = this.value.splice(oldIndex, 1)[0]
+        this.value.splice(newIndex, 0, spliceItem)
+        const v = cloneDeep(this.value)
+        this.$emit('sorted', v)
+        this.$emit('input', v)
       })
     },
     destroy() {
@@ -58,7 +71,7 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.canSort && this.init()
+      !this.disabled && this.init()
     })
   },
   destroyed() {
@@ -67,8 +80,8 @@ export default {
 }
 </script>
 
-<style>
-  * {
+<style scoped>
+  .wrapper, .k-sortable-item {
     outline: none;
   }
 </style>
