@@ -1,5 +1,5 @@
 {
-  "name": "vue-sortable",
+  "name": "vue-isortable",
   "version": "0.0.1",
   "description": "A Vue.js sortable component",
   "main": "dist/vue-sortable.min.js",
