@@ -23,6 +23,10 @@ export default {
       required: true,
       type: Array
     },
+    delay: {
+      type: Number,
+      default: 300
+    },
     // 是否禁止拖动
     disabled: {
       type: Boolean,
@@ -48,7 +52,7 @@ export default {
       if (!wrapper) return
       this.sortable = new Sortable(wrapper, {
         draggable: '.k-sortable-item',
-        delay: 300
+        delay: this.delay
       })
       this.sortable.on('sortable:start', e => {
         e.data.dragEvent.data.mirror.style.zIndex = 200
