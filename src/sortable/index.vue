@@ -1,7 +1,7 @@
 <template>
   <div
     ref="wrapper"
-    class="wrapper">
+    class="k-sortable-wrapper">
     <div
       class="k-sortable-item"
       v-for="(item, index) in lists"
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped>
-  .wrapper, .k-sortable-item {
+  .k-sortable-wrapper, .k-sortable-item {
     outline: none;
   }
 </style>
