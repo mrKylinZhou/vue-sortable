@@ -35,11 +35,11 @@ export default {
       default: false
     },
     wrapClass: {
-      default: "",
+      default: '',
       type: String
     },
     itemClass: {
-      default: "",
+      default: '',
       type: String
     }
   },
