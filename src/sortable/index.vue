@@ -4,10 +4,10 @@
     class="k-sortable-wrapper"
     :class="wrapClass">
     <div
-      v-for="(item, index) in lists"
+      v-for="item in value"
       class="k-sortable-item"
       :class="itemClass"
-      :key="index">
+      :key="item.key">
       <slot :data="item"></slot>
     </div>
   </div>
@@ -45,8 +45,7 @@ export default {
   },
   data() {
     return {
-      sortable: null,
-      lists: cloneDeep(this.value)
+      sortable: null
     }
   },
   watch: {
@@ -59,7 +58,7 @@ export default {
   methods: {
     init() {
       const wrapper = this.$refs.wrapper
-      if (!wrapper) return
+      if (!wrapper || this.sortable) return
       this.sortable = new Sortable(wrapper, {
         draggable: '.k-sortable-item',
         delay: this.delay
