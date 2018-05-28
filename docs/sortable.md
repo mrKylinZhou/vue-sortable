@@ -33,8 +33,15 @@ const lists = [
   { key: 2, value: 2 }
 ]
 
-```
+export default {
+  data() {
+    return {
+      lists: lists
+    }
+  }
+}
 
+```
 
 ### 时间
 | 事件名称 | 说明 | 回调参数 |
