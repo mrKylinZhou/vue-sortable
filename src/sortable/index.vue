@@ -1,10 +1,12 @@
 <template>
   <div
     ref="wrapper"
-    class="k-sortable-wrapper">
+    class="k-sortable-wrapper"
+    :class="wrapClass">
     <div
-      class="k-sortable-item"
       v-for="(item, index) in lists"
+      class="k-sortable-item"
+      :class="itemClass"
       :key="index">
       <slot :data="item"></slot>
     </div>
@@ -31,6 +33,14 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    wrapClass: {
+      default: "",
+      type: String
+    },
+    itemClass: {
+      default: "",
+      type: String
     }
   },
   data() {
