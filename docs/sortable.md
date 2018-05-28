@@ -18,6 +18,8 @@
 | value | 完整的列表 | array | — | — |
 | delay | 延迟时间 | number | — | 300 |
 | disabled | 是否禁止使用功能 | boolean | — | false |
+| wrapClass | 附加的包裹容器的类名 | string | — | - |
+| itemCLass | 附加的每一个Item的类名 | string | — | - |
 
 ### 时间
 | 事件名称 | 说明 | 回调参数 |
