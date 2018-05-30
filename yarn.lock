@@ -13,9 +13,9 @@
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/@nodelib/fs.stat/download/@nodelib/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@shopify/draggable@^1.0.0-beta.7":
-  version "1.0.0-beta.7"
-  resolved "http://registry.npm.taobao.org/@shopify/draggable/download/@shopify/draggable-1.0.0-beta.7.tgz#58c3619ffd88841d337c2922506f4a85540ba7ee"
+"@shopify/draggable@1.0.0-beta.5":
+  version "1.0.0-beta.5"
+  resolved "https://registry.npmjs.org/@shopify/draggable/-/draggable-1.0.0-beta.5.tgz#d3d6f1f07a10517f3c284d4c8fdd315916a73b95"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"

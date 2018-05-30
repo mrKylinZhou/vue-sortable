@@ -1,8 +1,8 @@
 {
   "name": "vue-isortable",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "description": "A Vue.js sortable component",
-  "main": "dist/vue-sortable.min.js",
+  "main": "dist/ivue-sortable.min.js",
   "repository": "git@github.com:mrKylinZhou/vue-sortable.git",
   "author": "Kylin <mrkylin.zhou@gmail.com>",
   "keywords": [
@@ -15,7 +15,7 @@
     "build": "./node_modules/.bin/webpack --display-error-details --config ./build/webpack.js"
   },
   "dependencies": {
-    "@shopify/draggable": "^1.0.0-beta.7",
+    "@shopify/draggable": "1.0.0-beta.5",
     "lodash": "^4.17.10",
     "vue": "^2.5.16"
   },

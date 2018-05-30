@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'vue-sortable.min.js',
+    filename: 'vue-isortable.min.js',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
