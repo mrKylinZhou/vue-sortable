@@ -2,7 +2,7 @@
   "name": "vue-isortable",
   "version": "0.0.12",
   "description": "A Vue.js sortable component",
-  "main": "dist/ivue-sortable.min.js",
+  "main": "dist/vue-isortable.min.js",
   "repository": "git@github.com:mrKylinZhou/vue-sortable.git",
   "author": "Kylin <mrkylin.zhou@gmail.com>",
   "keywords": [
