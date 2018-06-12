@@ -25,11 +25,12 @@
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | key | value每一项必须要包含的属性（每一项均不可重复 且尽量不要使用index） | string/number | — | — |
+| class | 每一项的可选参数 | string | — | — |
 
 ```javascript
 
 const lists = [
-  { key: 1, value: 1 },
+  { key: 1, value: 1, class: 'special' },
   { key: 2, value: 2 }
 ]
 
