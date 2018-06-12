@@ -6,7 +6,7 @@
     <div
       v-for="item in value"
       class="k-sortable-item"
-      :class="itemClass"
+      :class="[itemClass, item.class || '']"
       :key="item.key">
       <slot :data="item"></slot>
     </div>
